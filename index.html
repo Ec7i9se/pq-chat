@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>PeerJS test page</title>
+
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/chat.css" rel="stylesheet">
+
+    <script type="text/javascript" data-main="js/chat.js" src="js/lib/requirejs/require.min.js"></script>
+</head>
+<body>
+    <label id="peerID" class="label-info">Loading...</label>
+    <label id="userNotification" class="label-warning">Loading...</label>
+    <div class="chat">
+        <div class="chatMessages">
+            <pre id="chat" class="chatWindow"></pre>
+            <div class="chatTextPlusButton">
+                <textarea id="messageText" class="chatMessageWindow"></textarea>
+                <button type="button" id="sendMessage" class="btn-primary" disabled="true">Send</button>
+            </div>
+        </div>
+        <div class="chatContacts">
+            <div class="chatLabelPlusButton">
+                <input type="text" id="nickname" class="chatMessageWindow">
+                <button type="button" id="init" class="btn-primary" value="Join">
+                    Join
+                </button>
+            </div>
+            <div class="chatContactList">
+                <table style="width: 100%;">
+                    <tbody id="CLTableBody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="chatLabelPlusButton">
+                <input id="newPeer" type="text" class="chatMessageWindow"/>
+                <button type="button" id="addPeer" class="btn-primary" value="Add Peer" disabled="true">
+                    Add
+                </button>
+            </div>
+            <button type="button" id="mpOTR" class="btn-primary chatLabelPlusButton" value="change mpOTR state">
+                Start mpOTR
+            </button>
+        </div>
+    </div>
+</body>
+</html>

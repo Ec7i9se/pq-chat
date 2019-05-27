@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CheerpJ test</title>
+    <script src="https://cjrtnc.leaningtech.com/1.3/loader.js"></script>
+  </head>
+  <body>
+  </body>
+  <script>
+      cheerpjInit();
+      // cheerpjCreateDisplay(800,600);
+      // cheerpjRunJar("/app/TextDemo.jar"); 
+      (async () => {
+
+      var returnVal = await cjCall("sidh.Wrapper", "getKeysPair");
+      console.log("asd");
+      console.log(returnVal);
+      })
+  </script>
+</html>
